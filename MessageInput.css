@@ -1,0 +1,10 @@
+h4{
+    margin : 0 0 0 1rem;
+}
+
+input {
+    background-color: black;
+    margin-bottom: 6px;
+    width : 100%;
+    color : white;
+}

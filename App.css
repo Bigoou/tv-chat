@@ -1,0 +1,16 @@
+body {
+    background: white;
+    color: #4d4d4d;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width : 100vw;
+    height: 80vh;
+    text-align: center;
+    overflow-y : scroll;
+}
+
