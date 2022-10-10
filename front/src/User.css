@@ -1,5 +1,50 @@
+
+
 .user-list {
-    border : 1px solid black;
-    border-radius : 6px;
+    color : #4BFE47;
     padding : 16px;
+    font-family: 'VCR';
+    background-color: rgba(0,0,0,0.9);
+    z-index : -10 !important;
+    animation : slideLeft 1.5s ease-in-out;
+    transform : translateX(0);
+    padding-right : 4vw;
+    height : 100%;
+    overflow-y : scroll;
+    margin-right : 10vw;
+}
+
+.user {
+    margin-bottom : 1.5em;
+    max-width : 50%;
+    word-break : break-all;
+}
+
+.user:last-child {
+    margin-top : 5em;
+}
+
+.hidden {
+    animation : slideRight 1.5s ease-in-out;
+    transform : translateX(100%);
+}
+
+@keyframes slideRight {
+    0% {
+        transform : translateX(0%);
+    }
+
+    100% {
+        transform : translateX(100%);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform : translateX(100%);
+    }
+
+    100% {
+        transform : translateX(0);
+    }
 }

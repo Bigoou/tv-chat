@@ -1,13 +1,24 @@
 import React, { useEffect, useState } from "react";
 import "./User.css"
 
-function User({users}) {
+function User({className, users}) {
 
     let anonymousUsers = users.filter(user => user.name === "Anonymous");
 
+    const useChatScroll = (dep) => {
+        const ref = React.useRef();
+        React.useEffect(() => {
+          if (ref.current) {
+            ref.current.scrollTop = ref.current.scrollHeight;
+          }
+        }, [dep]);
+        return ref;
+      }
+    
+      const ref = useChatScroll(users);
+
     return (
-        <div className="user-list">
-            <h4>Utilisateurs connectés</h4>
+        <div className={className} ref={ref}>
                 {users.filter(user => user.name != 'Anonymous').map((user) => (
                     <div key={user.id} className="user">
                     {user.name}
